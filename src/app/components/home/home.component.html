@@ -1,0 +1,103 @@
+<!-- glasses sections -->
+<div class="mt-36 w-full">
+  <!-- top card section glasses -->
+  <div
+    class="flex flex-wrap justify-center items-center mx-auto space-x-4 lg:space-x-8"
+  >
+    <div class="flex flex-wrap justify-center gap-6 mt-4 font-medium">
+      @for(item of headerProductList; track item) {
+      <div
+        class="relative flex flex-col bg-white dark:bg-gray-700 shadow-sm border border-slate-200 dark:border-slate-600 rounded-lg w-full sm:w-80 md:w-96 lg:w-96 xl:w-80"
+      >
+        <div class="relative h-36 m-2.5 overflow-hidden text-white rounded-md">
+          <img
+            [src]="item.image"
+            alt="card-image"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <div class="p-4 flex items-center justify-center">
+          <span class="text-slate-800 dark:text-white text-xl">
+            {{ item.title }}
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Banner sections -->
+  <div class="relative w-full h-[60vh] mt-3">
+    <img
+      src="../../../assets/images/banner.webp"
+      alt="Sunglasses Model"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div
+      class="relative z-10 flex flex-col items-start justify-center h-full text-white px-6 md:px-20"
+    >
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        On New Sunglasses<br />40% Discount
+      </h1>
+      <p class="text-lg md:text-xl mb-6">Amazing Deals. Great 500+ Brands.</p>
+      <a
+        href="#"
+        class="px-6 py-3 bg-yellow-400 text-black font-bold rounded shadow hover:bg-yellow-500"
+      >
+        SHOP NOW
+      </a>
+    </div>
+  </div>
+
+  <!-- First Carousel section -->
+  <div class="mt-4">
+    <app-carousel
+      [carouselItems]="carouselItems"
+      [isCradCarousel]="false"
+    ></app-carousel>
+  </div>
+
+  <!-- Second Carousel section -->
+  <div class="p-6">
+    <div class="flex justify-center items-center mt-6 mb-6">
+      <h1 class="items-center font-semibold">New Products</h1>
+    </div>
+
+    <app-carousel
+      [carouselItems]="carouselItems"
+      [isCradCarousel]="true"
+    ></app-carousel>
+  </div>
+
+  <!-- whatsapp section -->
+  <div>
+    <h2 class="flex flex-row flex-nowrap items-center mt-24">
+      <span class="flex-grow block border-t border-gray-500"></span>
+      <span
+        class="flex-none block mx-4 px-4 py-2.5 text-xl rounded leading-none font-medium"
+      >
+        BY IT YOUR WAY
+      </span>
+      <span class="flex-grow block border-t border-gray-500"></span>
+    </h2>
+
+    <div class="p-6 flex items-center justify-center">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img
+          src="../../../assets/images/contact-img.webp"
+          alt="Call Support"
+          class="w-full h-full object-cover rounded-lg"
+        />
+
+        <img
+          src="../../../assets/images/whatsapp-img.webp"
+          alt="WhatsApp Support"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+</div>

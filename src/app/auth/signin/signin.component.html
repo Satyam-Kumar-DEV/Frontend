@@ -1,0 +1,166 @@
+<div class="bg-gray-50 dark:bg-gray-900 flex items-center">
+  <div class="w-full mx-auto">
+    <div class="relative inline-block">
+      <img
+        src="../../../assets/images/login-image.svg"
+        alt=""
+        class="w-full h-auto"
+      />
+      <span
+        (click)="dialogRef.close()"
+        class="material-icons cursor-pointer p-2 rounded-full text-black transition duration-300 ease-in-out bg-[#fff] hover:rotate-180 absolute top-2 right-2"
+      >
+        close
+      </span>
+    </div>
+    <div
+      class="bg-white dark:bg-gray-800 gap-12 w-full sm:p-6 p-6 shadow-md rounded-md overflow-hidden"
+    >
+      <form class="w-full" [formGroup]="loginForm">
+        @if(!isSentOtp) {
+
+        <div class="bg-white dark:bg-gray-800 w-full max-w-md">
+          <div class="flex items-center justify-between p-1">
+            <h2
+              class="text-gray-800 dark:text-gray-100 mb-0 text-xl font-semibold"
+            >
+              Sign In
+            </h2>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="mb-1">
+            <div class="relative flex items-center">
+              <input
+                name="email"
+                type="email"
+                formControlName="emailOrPhone"
+                class="bg-white dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
+                placeholder="Enter Mobile number / Email Address"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#bbb"
+                stroke="#bbb"
+                class="w-4 h-4 absolute right-4"
+                viewBox="0 0 682.667 682.667"
+              >
+                <defs>
+                  <clipPath id="a" clipPathUnits="userSpaceOnUse">
+                    <path d="M0 512h512V0H0Z"></path>
+                  </clipPath>
+                </defs>
+                <g
+                  clip-path="url(#a)"
+                  transform="matrix(1.33 0 0 -1.33 0 682.667)"
+                >
+                  <path
+                    fill="none"
+                    stroke-miterlimit="10"
+                    stroke-width="40"
+                    d="M452 444H60c-22.091 0-40-17.909-40-40v-39.446l212.127-157.782c14.17-10.54 33.576-10.54 47.746 0L492 364.554V404c0 22.091-17.909 40-40 40Z"
+                  ></path>
+                  <path
+                    d="M472 274.9V107.999c0-11.027-8.972-20-20-20H60c-11.028 0-20 8.973-20 20V274.9L0 304.652V107.999c0-33.084 26.916-60 60-60h392c33.084 0 60 26.916 60 60v196.653Z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <small
+            class="text-red-500"
+            *ngIf="
+              (formSubmitted || loginForm.controls['emailOrPhone'].touched) &&
+              loginForm.controls['emailOrPhone'].hasError('required')
+            "
+          >
+            This field is required
+          </small>
+          <small
+            class="text-red-500"
+            *ngIf="
+              (formSubmitted || loginForm.controls['emailOrPhone'].touched) &&
+              loginForm.controls['emailOrPhone'].hasError('invalidInput')
+            "
+          >
+            Enter a valid email or 10-digit phone number
+          </small>
+        </div>
+        } @if(isSentOtp) {
+        <div>
+          <h2 class="text-2xl font-bold mb-2 text-gray-800 dark:text-white">
+            Verify OTP
+          </h2>
+          <div
+            class="text-sm flex justify-center items-center text-gray-600 dark:text-gray-300 mb-6"
+          >
+            Enter the 4-digit code sent to +91 {{ emailOrPhone }}
+          </div>
+
+          <div class="flex justify-center space-x-4 mb-6">
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-16 text-center text-2xl border-2 border-blue-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white dark:border-blue-400 transition-transform duration-300 hover:scale-110"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-16 text-center text-2xl border-2 border-blue-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white dark:border-blue-400 transition-transform duration-300 hover:scale-110"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-16 text-center text-2xl border-2 border-blue-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white dark:border-blue-400 transition-transform duration-300 hover:scale-110"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-16 text-center text-2xl border-2 border-blue-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white dark:border-blue-400 transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          <div
+            class="text-sm flex justify-center text-gray-600 dark:text-gray-300 mb-6"
+          >
+            Didn't receive code?
+            <a
+              href="#"
+              class="text-blue-500 hover:underline dark:text-blue-400 transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-500"
+              >Resend OTP</a
+            >
+          </div>
+          <a href="https://abhirajk.vercel.app/" target="">
+            <button
+              class="w-full py-4 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-transform duration-300 hover:scale-105 dark:bg-blue-600 dark:hover:bg-blue-700"
+            >
+              Verify OTP
+            </button>
+          </a>
+        </div>
+        } @if(!isSentOtp) {
+        <div class="mt-4 mb-4">
+          <button
+            type="button"
+            (click)="onSubmit()"
+            class="w-full py-2.5 px-4 text-sm tracking-wider cursor-pointer rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none"
+          >
+            Login
+          </button>
+        </div>
+
+        <p class="text-gray-800 dark:text-gray-200 text-sm mt-4 text-center">
+          Don't have account?
+          <a
+            (click)="redirectToSignup(); dialogRef.close()"
+            href="javascript:void(0);"
+            class="text-blue-600 font-semibold hover:underline ml-1"
+            >Sign up here</a
+          >
+        </p>
+        }
+      </form>
+    </div>
+  </div>
+</div>

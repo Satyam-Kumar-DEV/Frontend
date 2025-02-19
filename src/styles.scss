@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+.dark body {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Example for Tailwind elements */
+.bg-light {
+  background-color: #f0f0f0;
+}
+
+.bg-dark {
+  background-color: #1f2937; /* Dark background */
+}
+
+.text-light {
+  color: #1f2937;
+}
+
+.text-dark {
+  color: #ffffff;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
