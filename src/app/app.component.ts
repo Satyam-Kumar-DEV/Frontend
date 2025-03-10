@@ -17,7 +17,7 @@ declare global {
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Fix the eye';
+  title = 'Fix my eye';
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object

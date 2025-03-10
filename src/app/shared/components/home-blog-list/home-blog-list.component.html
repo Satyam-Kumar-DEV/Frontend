@@ -1,0 +1,93 @@
+<!-- Blog Carousal  -->
+
+<div
+  data-hs-carousel='{
+  "loadingClasses": "opacity-0",
+  "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer",
+  "slidesQty": {
+    "xs": 1,
+    "lg": 4
+  },
+  "isDraggable": true
+}'
+  class="relative"
+>
+  <div class="hs-carousel w-full overflow-hidden bg-white rounded-lg">
+    <div class="relative min-h-72 -mx-1">
+      <div
+        class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap opacity-0 cursor-grab transition-transform duration-700 hs-carousel-dragging:transition-none hs-carousel-dragging:cursor-grabbing"
+      >
+        @for(item of bloglist; track item) {
+        <div class="hs-carousel-slide px-1">
+          <div class="flex justify-center h-full p-4">
+            <div
+              class="relative flex flex-col cursor-pointer bg-white dark:bg-gray-700 shadow-sm border border-slate-200 dark:border-slate-600 rounded-lg w-full sm:w-80 md:w-96 lg:w-96 xl:w-80"
+            >
+              <div
+                class="relative m-[5px] overflow-hidden text-white rounded-md"
+              >
+                <img
+                  [src]="item.image"
+                  alt="card-image"
+                  class="w-full h-full"
+                />
+              </div>
+
+              <!-- Card Content -->
+              <div class="p-4 flex flex-col items-center justify-center">
+                <div
+                  class="flex items-center justify-center gap-6 w-full flex-wrap"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-icons text-gray-600 dark:text-gray-300"
+                      >timer</span
+                    >
+                    <span class="text-gray-800 dark:text-white text-sm">
+                      {{ item.date }}
+                    </span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-icons text-gray-600 dark:text-gray-300"
+                      >forum</span
+                    >
+                    <span class="text-gray-800 dark:text-white text-sm">
+                      Comments ({{ item.commentCount }})
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Title -->
+                <span
+                  class="text-gray-900 dark:text-white font-medium text-lg mt-3 text-center"
+                >
+                  {{ item.title }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg"
+  >
+    <span class="text-2xl" aria-hidden="true">
+      <span class="material-icons">arrow_back_ios</span>
+    </span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button
+    type="button"
+    class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg"
+  >
+    <span class="sr-only">Next</span>
+    <span class="material-icons">arrow_forward_ios</span>
+  </button>
+</div>
