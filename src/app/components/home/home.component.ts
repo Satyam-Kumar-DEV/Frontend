@@ -37,19 +37,19 @@ export class HomeComponent {
     },
     {
       title: 'Cat-Eye',
-      image: '../../../assets/images/carousel-img.webp',
+      image: '../../../assets/images/cateeye.webp',
     },
     {
       title: 'Clubmaster',
-      image: '../../../assets/images/carousel-img.webp',
+      image: '../../../assets/images/clubmaster.webp',
     },
     {
       title: 'Transparent',
-      image: '../../../assets/images/carousel-img.webp',
+      image: '../../../assets/images/rounds.webp',
     },
     {
       title: 'Blend Edit',
-      image: '../../../assets/images/carousel-img.webp',
+      image: '../../../assets/images/trans.webp',
     },
     {
       title: 'Air Clip On',
