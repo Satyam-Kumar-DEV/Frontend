@@ -13,7 +13,7 @@ import { SignupComponent } from '../../auth/signup/signup.component';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  private isDarkMode: boolean = false;
+  isDarkMode: boolean = false;
 
   constructor(
     private dialog: MatDialog,
