@@ -88,15 +88,17 @@
 
   <!-- whatsapp section -->
   <div>
-    <h2 class="flex flex-row flex-nowrap items-center mt-24">
-      <span class="flex-grow block border-t border-gray-500"></span>
-      <span
-        class="flex-none block mx-4 px-4 py-2.5 text-xl rounded leading-none font-medium"
-      >
-        BY IT YOUR WAY
-      </span>
-      <span class="flex-grow block border-t border-gray-500"></span>
-    </h2>
+    <div class="flex justify-center w-full mt-24">
+      <h2 class="flex w-11/12 flex-nowrap items-center">
+        <span class="flex-grow block border-t border-gray-500"></span>
+        <span
+          class="flex-none block mx-4 px-4 py-2.5 text-xl rounded leading-none font-medium text-center"
+        >
+          BUY IT YOUR WAY
+        </span>
+        <span class="flex-grow block border-t border-gray-500"></span>
+      </h2>
+    </div>
 
     <div class="p-6 flex items-center justify-center">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -188,7 +190,7 @@
 
   <div>
     <div class="flex justify-center items-center">
-      <h2 class="text-lg">From the blog</h2>
+      <h2 class="font-size[2rem]">From the blog</h2>
     </div>
     <div>
       <app-home-blog-list [bloglist]="bloglist"></app-home-blog-list>
