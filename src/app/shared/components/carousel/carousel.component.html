@@ -103,11 +103,21 @@
                   class="w-full h-full object-contain z-0 transition-all duration-300 hover:scale-150"
                 />
               </div>
-              <div class="p-4 flex flex-col items-center justify-center">
-                <span class="text-slate-800 dark:text-white">
+              <div class="p-4 flex flex-col items-center justify-center w-full">
+                <div class="flex items-center justify-center">
+                  <i
+                    *ngFor="let _ of [].constructor(5); let i = index"
+                    class="material-icons text-yellow-500 text-xl"
+                  >
+                    star
+                  </i>
+                </div>
+                <span class="text-slate-800 text-xl dark:text-white">
                   {{ item.title }}
                 </span>
-                <span class="text-slate-800 dark:text-white"> $100 </span>
+                <span class="text-slate-800 text-xl dark:text-white">
+                  $100
+                </span>
               </div>
             </div>
           </div>

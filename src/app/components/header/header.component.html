@@ -41,42 +41,41 @@
         <button
           class="text-gray-700 dark:text-white hover:text-orange-500 flex flex-col items-center"
         >
-          <i class="far fa-heart text-xl"></i>
-          <span class="text-xs mt-1">Wishlist</span>
+          <span class="mt-1">Track order</span>
         </button>
         <button
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex flex-col items-center"
+          class="text-gray-700 dark:text-white hover:text-orange-500 flex items-center justify-center gap-1"
         >
-          <i class="fas fa-truck text-xl"></i>
-          <span class="text-xs mt-1">Track</span>
+          <i class="far fa-heart text-xl"></i>
+          <span class="mt-1">Wishlist</span>
+        </button>
+
+        <button
+          (click)="openSigninPopup()"
+          class="text-gray-700 dark:text-white hover:text-orange-500"
+        >
+          <span class="mt-1">Sign in & Sign Up</span>
         </button>
         <button
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex flex-col items-center relative"
+          class="text-gray-700 dark:text-white hover:text-orange-500 flex items-center gap-2 relative"
         >
           <i class="fas fa-shopping-cart text-xl"></i>
           <span
             class="absolute -top-2 -right-2 bg-orange-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center"
             >0</span
           >
-          <span class="text-xs mt-1">Cart</span>
-        </button>
-        <button
-          (click)="openSigninPopup()"
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex flex-col items-center"
-        >
-          <i class="fas fa-user text-xl"></i>
-          <span class="text-xs mt-1">Sign in & Sign Up</span>
+          <span class="mt-1">Cart</span>
         </button>
         <button
           (click)="toggleTheme()"
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex flex-col items-center"
+          class="text-gray-700 dark:text-white hover:text-orange-500 flex gap-1 items-center"
         >
           @if(isDarkMode == true) {
           <span class="material-icons text-xl">light_mode</span>
           } @else {
           <i class="fas fa-moon text-xl"></i>
           }
-          <span class="text-xs mt-1">Theme</span>
+          <span class="mt-1">Theme</span>
         </button>
       </div>
 

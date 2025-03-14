@@ -11,4 +11,5 @@ import { Component, Input } from '@angular/core';
 export class CarouselComponent {
   @Input() carouselItems: any;
   @Input() isCardCarousel: number = 0;
+  counts: number[] = [5];
 }
