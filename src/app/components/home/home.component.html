@@ -29,18 +29,26 @@
         >
           @for( description of item.moreDetails; track description) {
           <div class="flex justify-between">
-            <span class="block py-1 text-black hover:text-black md:mx-2">
+            <span
+              class="block py-1 text-black dark:text-white hover:text-black md:mx-2"
+            >
               {{ description.title }}
             </span>
-            <span class="block py-1 text-black hover:text-black md:mx-2">
+            <span
+              class="block py-1 text-black dark:text-white hover:text-black md:mx-2"
+            >
               Satrting
             </span>
           </div>
           <div class="flex justify-between border-b py-2 border-gray-300">
-            <span class="block text-[12px] text-black hover:text-black md:mx-2">
+            <span
+              class="block text-[12px] text-black dark:text-white hover:text-black md:mx-2"
+            >
               {{ description.type }}
             </span>
-            <span class="block text-[12px] text-black hover:text-black md:mx-2">
+            <span
+              class="block text-[12px] text-black dark:text-white hover:text-black md:mx-2"
+            >
               {{ description.price }}
             </span>
           </div>
@@ -159,8 +167,20 @@
 
   <!-- Second Carousel section -->
   <div class="p-6">
-    <div class="flex justify-center items-center mt-6 mb-6">
-      <h1 class="items-center font-semibold">New Products</h1>
+    <div class="flex justify-center w-full mt-24">
+      <h2 class="flex w-11/12 flex-nowrap items-center">
+        <span
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
+        <span
+          class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
+        >
+          NEW PRODUCTS
+        </span>
+        <span
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
+      </h2>
     </div>
 
     <app-carousel
@@ -173,13 +193,17 @@
   <div>
     <div class="flex justify-center w-full mt-24">
       <h2 class="flex w-11/12 flex-nowrap items-center">
-        <span class="flex-grow block border-t border-gray-500"></span>
         <span
-          class="flex-none block mx-4 px-4 py-2.5 text-xl rounded leading-none font-medium text-center"
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
+        <span
+          class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
         >
           BUY IT YOUR WAY
         </span>
-        <span class="flex-grow block border-t border-gray-500"></span>
+        <span
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
       </h2>
     </div>
 
@@ -242,7 +266,22 @@
 
   <!-- FAQ Section -->
   <div class="flex flex-col items-center justify-center p-5">
-    <h1>FAQS</h1>
+    <!-- <h1>FAQS</h1> -->
+    <div class="flex justify-center w-full mt-24">
+      <h2 class="flex w-11/12 flex-nowrap items-center">
+        <span
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
+        <span
+          class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
+        >
+          FAQS
+        </span>
+        <span
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
+      </h2>
+    </div>
     <div class="w-full max-w-5xl bg-white dark:bg-gray-800 p-5">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-9">
         <div *ngFor="let faq of faqs; let i = index">
@@ -272,8 +311,20 @@
   </div>
 
   <div>
-    <div class="flex justify-center items-center">
-      <h2 class="font-size[2rem]">From the blog</h2>
+    <div class="flex justify-center w-full mt-24">
+      <h2 class="flex w-11/12 flex-nowrap items-center">
+        <span
+          class="flex-grow block border-t dark:border-white border-gray-500"
+        ></span>
+        <span
+          class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
+        >
+          FROM THE BLOGS
+        </span>
+        <span
+          class="flex-grow block border-t border-gray-500 dark:border-white"
+        ></span>
+      </h2>
     </div>
     <div>
       <app-home-blog-list [bloglist]="bloglist"></app-home-blog-list>
