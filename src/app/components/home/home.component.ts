@@ -15,21 +15,75 @@ export class HomeComponent {
     {
       title: 'Eyeglasses',
       image: '../../../assets/images/product-img.webp',
+      moreDetails: [
+        { title: 'Air Light-Weight', type: 'premium lense', price: '$500' },
+        {
+          title: 'Premium Eyeglasses',
+          type: 'John jacob lense',
+          price: '$500',
+        },
+      ],
     },
     {
       title: 'Sunglasses',
       image: '../../../assets/images/product-img.webp',
+      moreDetails: [
+        { title: 'Air Light-Weight', type: 'premium lense', price: '$500' },
+        {
+          title: 'Premium Eyeglasses',
+          type: 'John jacob lense',
+          price: '$500',
+        },
+      ],
     },
     {
       title: 'Screenglasses',
       image: '../../../assets/images/product-img.webp',
+      moreDetails: [
+        { title: 'Air Light-Weight', type: 'premium lense', price: '$500' },
+        {
+          title: 'Premium Eyeglasses',
+          type: 'John jacob lense',
+          price: '$500',
+        },
+      ],
     },
     {
       title: 'Contactlense',
       image: '../../../assets/images/product-img.webp',
+      moreDetails: [
+        { title: 'Air Light-Weight', type: 'premium lense', price: '$500' },
+        {
+          title: 'Premium Eyeglasses',
+          type: 'John jacob lense',
+          price: '$500',
+        },
+      ],
     },
   ];
 
+  slideCarousel: any[] = [
+    {
+      img: '../../../assets/images/Desktop-5.webp',
+      alt: 'carousel images',
+    },
+    {
+      img: '../../../assets/images/Desktopwinter-edit-2.webp',
+      alt: 'carousel images',
+    },
+    {
+      img: '../../../assets/images/twysty-desktop-4.webp',
+      alt: 'carousel images',
+    },
+    {
+      img: '../../../assets/images/web-3.webp',
+      alt: 'carousel images',
+    },
+    {
+      img: '../../../assets/images/web-banner-Swaps-1.webp',
+      alt: 'carousel images',
+    },
+  ];
   carouselItems: any[] = [
     {
       title: 'Round',

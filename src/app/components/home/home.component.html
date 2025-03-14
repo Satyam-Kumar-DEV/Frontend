@@ -7,8 +7,9 @@
     <div class="flex flex-wrap justify-center gap-9 mt-4 font-medium">
       @for(item of headerProductList; track item) {
       <div
-        class="relative flex flex-col bg-white dark:bg-gray-700 shadow-sm border border-slate-200 dark:border-slate-600 rounded-lg w-full sm:w-80 md:w-96 lg:w-96 xl:w-80"
+        class="group relative flex flex-col bg-white dark:bg-gray-700 shadow-sm border border-slate-200 dark:border-slate-600 rounded-lg w-full sm:w-80 md:w-96 lg:w-96 xl:w-80"
       >
+        <!-- Image Section -->
         <div class="relative h-36 m-2.5 overflow-hidden text-white rounded-md">
           <img
             [src]="item.image"
@@ -20,6 +21,32 @@
           <span class="text-slate-800 dark:text-white text-xl">
             {{ item.title }}
           </span>
+        </div>
+
+        <!-- Hover Dropdown -->
+        <div
+          class="invisible absolute left-0 top-full w-full z-50 flex flex-col bg-white dark:bg-gray-800 py-4 px-4 text-gray-800 dark:text-white shadow-xl rounded-lg group-hover:visible"
+        >
+          @for( description of item.moreDetails; track description) {
+          <div class="flex justify-between">
+            <span class="block py-1 text-black hover:text-black md:mx-2">
+              {{ description.title }}
+            </span>
+            <span class="block py-1 text-black hover:text-black md:mx-2">
+              Satrting
+            </span>
+          </div>
+          <div class="flex justify-between border-b py-2 border-gray-300">
+            <span class="block text-[12px] text-black hover:text-black md:mx-2">
+              {{ description.type }}
+            </span>
+            <span class="block text-[12px] text-black hover:text-black md:mx-2">
+              {{ description.price }}
+            </span>
+          </div>
+
+          }
+          <a class="pt-4 text-[#37b4c7]" href="#">View all</a>
         </div>
       </div>
 
@@ -52,6 +79,59 @@
       </a>
     </div>
   </div>
+  <!-- Banner Slider -->
+
+  <!-- Carousel Slider -->
+  <div class="py-3 cursor-pointer">
+    <div
+      data-hs-carousel='{
+    "loadingClasses": "opacity-0",
+    "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+    "isAutoPlay": true
+  }'
+      class="relative"
+    >
+      <div
+        class="hs-carousel relative overflow-hidden w-full min-h-[600px] bg-white rounded-lg"
+      >
+        <div
+          class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0"
+        >
+          @for(item of slideCarousel; track item){
+          <div class="hs-carousel-slide">
+            <div
+              class="flex justify-center h-full w-full bg-gray-100 dark:bg-neutral-900"
+            >
+              <img
+                class="self-center text-4xl h-full w-full text-gray-800 transition duration-700 dark:text-white"
+                [src]="item.img"
+                [alt]="item.alt"
+              />
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-6 inline-flex justify-center items-center w-11.5 h-full text-gray-800 0 rounded-s-lg dark:text-white dark:focus:bg-white/10"
+      >
+        <span class="text-2xl" aria-hidden="true">
+          <span class="material-icons text-white">arrow_back_ios</span>
+        </span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button
+        type="button"
+        class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-6 inline-flex justify-center items-center w-11.5 h-full text-gray-800 rounded-e-lg dark:text-white dark:focus:bg-white/10"
+      >
+        <span class="sr-only">Next</span>
+        <span class="material-icons text-white">arrow_forward_ios</span>
+      </button>
+    </div>
+  </div>
+  <!-- carousel Slider -->
 
   <!-- First Carousel section -->
   <div class="flex mt-4 items-center p-6 justify-center">
