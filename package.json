@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:frontend": "node dist/frontend/server/server.mjs",
-    "postinstall": "npx tailwindcss -o ./src/tailwind.css --watch"
+    "postinstall": "npx tailwindcss -o ./src/tailwind.css"
   },
   "private": true,
   "dependencies": {
