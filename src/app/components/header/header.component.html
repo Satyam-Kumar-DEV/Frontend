@@ -1,7 +1,7 @@
 <header class="fixed w-full z-50 top-0">
   <!-- Top Offer Banner -->
   <div
-    class="bg-orange-500 py-2 text-white flex flex-col md:flex-row items-center justify-center text-center px-4 gap-4 md:gap-6"
+    class="bg-orange-500 py-1 text-white flex flex-col md:flex-row items-center justify-center text-center px-4 gap-4 md:gap-6"
   >
     <h2 class="text-base md:text-lg font-semibold pt-4">
       Special Offer: 40% Off on New Collection!
@@ -9,19 +9,19 @@
 
     <div class="flex space-x-3 md:ml-4 mt-2 md:mt-0">
       <div
-        class="bg-white p-3 rounded-md shadow-md w-14 flex flex-col items-center justify-center"
+        class="bg-white p-2 rounded-md shadow-md w-10 flex flex-col items-center justify-center"
       >
-        <span class="text-blue-600 text-xl font-bold">02</span>
+        <span class="text-blue-600 text-lg">02</span>
       </div>
       <div
-        class="bg-white p-3 rounded-md shadow-md w-14 flex flex-col items-center justify-center"
+        class="bg-white p-2 rounded-md shadow-md w-10 flex flex-col items-center justify-center"
       >
-        <span class="text-blue-600 text-xl font-bold">59</span>
+        <span class="text-blue-600 text-lg">59</span>
       </div>
       <div
-        class="bg-white p-3 rounded-md shadow-md w-14 flex flex-col items-center justify-center"
+        class="bg-white p-2 rounded-md shadow-md w-10 flex flex-col items-center justify-center"
       >
-        <span class="text-blue-600 text-xl font-bold">13</span>
+        <span class="text-blue-600 text-lg">13</span>
       </div>
     </div>
   </div>
@@ -48,10 +48,10 @@
           <input
             type="text"
             placeholder="Search for products..."
-            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-orange-500 bg-gray-50 dark:bg-gray-800 dark:text-white"
+            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500 bg-gray-50 dark:bg-gray-800 dark:text-white"
           />
           <button
-            class="absolute right-3 top-2.5 text-gray-500 hover:text-orange-500"
+            class="absolute right-3 top-2.5 text-gray-500 dark:text-white hover:text-blue-500"
           >
             <i class="fas fa-search"></i>
           </button>
@@ -61,12 +61,12 @@
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-6">
         <button
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex flex-col items-center"
+          class="text-gray-700 dark:text-white hover:text-blue-500 flex flex-col items-center"
         >
           <span class="mt-1">Track order</span>
         </button>
         <button
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex items-center justify-center gap-1"
+          class="text-gray-700 dark:text-white hover:text-blue-500 flex items-center justify-center gap-1"
         >
           <i class="far fa-heart text-xl"></i>
           <span class="mt-1">Wishlist</span>
@@ -74,12 +74,12 @@
 
         <button
           (click)="openSigninPopup()"
-          class="text-gray-700 dark:text-white hover:text-orange-500"
+          class="text-gray-700 dark:text-white hover:text-blue-500"
         >
           <span class="mt-1">Sign in & Sign Up</span>
         </button>
         <button
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex items-center gap-2 relative"
+          class="text-gray-700 dark:text-white hover:text-blue-500 flex items-center gap-2 relative"
         >
           <i class="fas fa-shopping-cart text-xl"></i>
           <span
@@ -90,14 +90,13 @@
         </button>
         <button
           (click)="toggleTheme()"
-          class="text-gray-700 dark:text-white hover:text-orange-500 flex gap-1 items-center"
+          class="text-gray-700 dark:text-white hover:text-blue-500 flex gap-1 items-center"
         >
           @if(isDarkMode == true) {
           <span class="material-icons text-xl">light_mode</span>
           } @else {
           <i class="fas fa-moon text-xl"></i>
           }
-          <span class="mt-1">Theme</span>
         </button>
       </div>
 
@@ -117,27 +116,27 @@
     class="hidden md:hidden bg-white dark:bg-gray-800 text-center py-4 space-y-4"
   >
     <button
-      class="text-gray-700 dark:text-white hover:text-orange-500 block w-full py-2"
+      class="text-gray-700 dark:text-white hover:text-blue-500 block w-full py-2"
     >
       Wishlist
     </button>
     <button
-      class="text-gray-700 dark:text-white hover:text-orange-500 block w-full py-2"
+      class="text-gray-700 dark:text-white hover:text-blue-500 block w-full py-2"
     >
       Track
     </button>
     <button
-      class="text-gray-700 dark:text-white hover:text-orange-500 block w-full py-2"
+      class="text-gray-700 dark:text-white hover:text-blue-500 block w-full py-2"
     >
       Cart
     </button>
     <button
-      class="text-gray-700 dark:text-white hover:text-orange-500 block w-full py-2"
+      class="text-gray-700 dark:text-white hover:text-blue-500 block w-full py-2"
     >
       Sign Up
     </button>
     <button
-      class="text-gray-700 dark:text-white hover:text-orange-500 block w-full py-2"
+      class="text-gray-700 dark:text-white hover:text-blue-500 block w-full py-2"
     >
       Theme
     </button>
@@ -156,42 +155,42 @@
         <li>
           <a
             href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-orange-500"
+            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
             >Home</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-orange-500"
+            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
             >Company</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-orange-500"
+            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
             >Marketplace</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-orange-500"
+            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
             >Features</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-orange-500"
+            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
             >Team</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-orange-500"
+            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
             >Contact</a
           >
         </li>

@@ -1,5 +1,5 @@
 <!-- glasses sections -->
-<div class="mt-48 w-full">
+<div id="homepage-scroll" class="mt-44 w-full">
   <!-- top card section glasses -->
   <div
     class="flex flex-wrap justify-center items-center mx-auto space-x-4 lg:space-x-8"
@@ -193,6 +193,7 @@
     </div>
 
     <app-carousel
+      class="px-6"
       [carouselItems]="carouselItems"
       [isCardCarousel]="2"
     ></app-carousel>
@@ -238,12 +239,14 @@
     class="p-6 w-full sm:w-[90%] md:w-[80%] lg:w-[75%] mx-auto flex flex-col items-center justify-center"
   >
     <div
-      class="flex justify-between items-center border-b border-gray-300 dark:border-gray-600 px-6 w-full"
+      class="flex justify-between items-center border-b border-gray-300 dark:border-gray-600 px-2 w-full"
     >
       <div class="text-2xl text-gray-600 font-medium dark:text-white">
         EYEGLASSES
       </div>
-      <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline"
+      <a
+        href="#"
+        class="text-blue-500 text-lg dark:text-blue-400 hover:underline"
         >View Range</a
       >
     </div>
@@ -260,12 +263,14 @@
     class="p-6 w-full sm:w-[90%] md:w-[80%] lg:w-[75%] mx-auto flex flex-col items-center justify-center"
   >
     <div
-      class="flex justify-between items-center border-b border-gray-300 dark:border-gray-600 px-6 w-full"
+      class="flex justify-between items-center border-b border-gray-300 dark:border-gray-600 px-2 w-full"
     >
-      <div class="text-2xl text-gray-500 dark:text-white font-medium">
+      <div class="text-2xl text-gray-600 dark:text-white font-medium">
         SUNLASSES
       </div>
-      <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline"
+      <a
+        href="#"
+        class="text-blue-500 text-lg dark:text-blue-400 hover:underline"
         >View Range</a
       >
     </div>
@@ -346,17 +351,15 @@
 
   <!-- newsettler -->
   <section
-    class="bg-gradient-to-b from-gray-900 to-purple-900 text-white dark:bg-gray-900"
+    class="md:mt-4 bg-gradient-to-br from-gray-900 via-gray-900 to-violet-900 text-white dark:bg-gray-900"
   >
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-md sm:text-center">
-        <h2
-          class="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white"
-        >
-          Sign up for our newsletter
-        </h2>
+        <div class="mb-4 lg:text-[36px] pb-4 tracking-tight text-white">
+          Subscribe to Our Newsettler
+        </div>
         <p
-          class="mx-auto mb-8 max-w-2xl font-light md:mb-12 sm:text-xl text-white"
+          class="mx-auto mb-8 max-w-2xl font-light md:mb-12 sm:text-xl text-gray-400 dark:text-gray-400"
         >
           Subscribe Newsettler and Join our list and get 15% off your first
           purchase.
@@ -409,4 +412,14 @@
       </div>
     </div>
   </section>
+
+  @if(showScrollButton) {
+  <button
+    class="fixed bottom-5 right-5 bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-700 transition-opacity duration-300 dark:bg-white dark:text-black"
+    matTooltip="Return to top"
+    (click)="scrollToTop()"
+  >
+    <span class="material-icons text-2xl">arrow_upward</span>
+  </button>
+  }
 </div>

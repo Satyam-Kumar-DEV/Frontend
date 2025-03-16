@@ -1,16 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CarouselComponent } from '../../shared/components/carousel/carousel.component';
 import { HomeBlogListComponent } from '../../shared/components/home-blog-list/home-blog-list.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, CarouselComponent, HomeBlogListComponent],
+  imports: [
+    CommonModule,
+    CarouselComponent,
+    HomeBlogListComponent,
+    MatTooltipModule,
+  ],
 })
 export class HomeComponent {
+  showScrollButton: boolean = false;
   headerProductList: any[] = [
     {
       title: 'Eyeglasses',
@@ -205,6 +212,15 @@ export class HomeComponent {
       isOpen: false,
     },
   ];
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollButton = window.scrollY > 200;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   toggleFAQ(index: number): void {
     this.faqs[index].isOpen = !this.faqs[index].isOpen;
