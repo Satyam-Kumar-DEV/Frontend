@@ -83,10 +83,13 @@
         >
           <i class="fas fa-shopping-cart text-xl"></i>
           <span
-            class="absolute -top-2 -right-2 bg-orange-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center"
+            class="absolute -top-2 -right-2 bg-green-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center"
             >0</span
           >
           <span class="mt-1">Cart</span>
+        </button>
+        <button class="text-gray-700 dark:text-white hover:text-blue-500">
+          <span class="mt-1">Contact Us</span>
         </button>
         <button
           (click)="toggleTheme()"
@@ -143,56 +146,49 @@
   </div>
 
   <!-- Category Menu -->
-  <nav
-    class="bg-[#fbf9f7] border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 dark:border-t-2 dark:border-b-2 dark:border-gray-600"
-  >
+  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 shadow">
     <div
-      class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+      class="flex justify-between items-center mx-auto max-w-screen-xl relative"
     >
-      <ul
-        class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
-      >
-        <li>
-          <a
-            href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
-            >Home</a
+      <ul class="flex flex-col lg:flex-row lg:space-x-8">
+        <li
+          class="relative group"
+          (mouseenter)="toggleDropdown('eyeglasses')"
+          (mouseleave)="toggleDropdown('')"
+        >
+          <a href="#" class="py-2 text-gray-700 hover:text-blue-500"
+            >EYEGLASSES</a
           >
+          <app-nav-hover-dropdown
+            *ngIf="activeDropdown === 'eyeglasses'"
+            [isDropdownOpen]="true"
+          ></app-nav-hover-dropdown>
         </li>
-        <li>
-          <a
-            href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
-            >Company</a
+        <li
+          class="relative group"
+          (mouseenter)="toggleDropdown('sunglasses')"
+          (mouseleave)="toggleDropdown('')"
+        >
+          <a href="#" class="py-2 text-gray-700 hover:text-blue-500"
+            >SUNGLASSES</a
           >
+          <app-nav-hover-dropdown
+            *ngIf="activeDropdown === 'sunglasses'"
+            [isDropdownOpen]="true"
+          ></app-nav-hover-dropdown>
         </li>
-        <li>
-          <a
-            href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
-            >Marketplace</a
+        <li
+          class="relative group"
+          (mouseenter)="toggleDropdown('screen-glasses')"
+          (mouseleave)="toggleDropdown('')"
+        >
+          <a href="#" class="py-2 text-gray-700 hover:text-blue-500"
+            >SCREEN GLASSES</a
           >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
-            >Features</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
-            >Team</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="py-2 text-gray-700 dark:text-white hover:text-blue-500"
-            >Contact</a
-          >
+          <app-nav-hover-dropdown
+            *ngIf="activeDropdown === 'screen-glasses'"
+            [isDropdownOpen]="true"
+          ></app-nav-hover-dropdown>
         </li>
       </ul>
     </div>

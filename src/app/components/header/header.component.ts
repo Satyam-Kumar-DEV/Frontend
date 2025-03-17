@@ -4,16 +4,23 @@ import { SigninComponent } from '../../auth/signin/signin.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from '../../auth/signup/signup.component';
+import { NavHoverDropdownComponent } from '../nav-hover-dropdown/nav-hover-dropdown.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatDialogModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    NavHoverDropdownComponent,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   isDarkMode: boolean = false;
+  activeDropdown: string = '';
 
   constructor(
     private dialog: MatDialog,
@@ -26,6 +33,10 @@ export class HeaderComponent {
       }
       this.applyTheme();
     }
+  }
+
+  toggleDropdown(menu: string) {
+    this.activeDropdown = menu;
   }
 
   openSigninPopup() {
