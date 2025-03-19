@@ -283,6 +283,41 @@
     ></app-carousel>
   </div>
 
+  <!-- PREMIUM BANNER -->
+
+  <!-- our stores section -->
+  <div class="cursor-pointer">
+    <img
+      src="../../../assets/images/premium-lense-banner.webp"
+      alt="Our stores"
+      class="h-full w-full object-contain"
+    />
+  </div>
+
+  <!-- COMPUTER glasses carousel 2 -->
+  <div
+    class="p-6 mt-6 w-full sm:w-[90%] md:w-[80%] lg:w-[80%] mx-auto flex flex-col items-center justify-center"
+  >
+    <div
+      class="flex justify-between items-center border-b border-gray-300 dark:border-gray-600 px-2 w-full"
+    >
+      <div class="text-2xl text-gray-600 dark:text-white font-medium">
+        WITH ZERO POWER COMPUTER BLU LENSES
+      </div>
+      <a
+        href="#"
+        class="text-blue-500 text-lg dark:text-blue-400 hover:underline"
+        >View Range</a
+      >
+    </div>
+
+    <app-carousel
+      [carouselItems]="computerGlassesList"
+      [isCardCarousel]="3"
+      class="w-full"
+    ></app-carousel>
+  </div>
+
   <!-- FAQ Section -->
   <div class="flex flex-col items-center justify-center p-5">
     <!-- <h1>FAQS</h1> -->

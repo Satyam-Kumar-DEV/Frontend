@@ -91,6 +91,7 @@ export class HomeComponent {
       alt: 'carousel images',
     },
   ];
+
   carouselItems: any[] = [
     {
       title: 'Round',
@@ -119,6 +120,29 @@ export class HomeComponent {
     {
       title: 'Contactlense',
       image: '../../../assets/images/carousel-img.webp',
+    },
+  ];
+
+  computerGlassesList: any[] = [
+    {
+      image: '../../../assets/images/blue-lense-5.webp',
+      alt: 'carousel images',
+    },
+    {
+      image: '../../../assets/images/blue-lense-4.webp',
+      alt: 'carousel images',
+    },
+    {
+      image: '../../../assets/images/blue-lense-3.webp',
+      alt: 'carousel images',
+    },
+    {
+      image: '../../../assets/images/blue-lense-2.webp',
+      alt: 'carousel images',
+    },
+    {
+      image: '../../../assets/images/blue-lense-1.webp',
+      alt: 'carousel images',
     },
   ];
 
