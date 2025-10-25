@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #8e94cf;
+  color: #ffffff;
 }
 
 .dark body {
@@ -13,17 +13,22 @@ body {
 }
 
 .bg-light {
-  background-color: #f0f0f0;
+  background-color: #8e94cf;
 }
 
 .bg-dark {
-  background-color: #1f2937; /* Dark background */
+  background-color: #1f2937;
 }
 
 .text-light {
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .text-dark {
   color: #ffffff;
+}
+
+.error-class {
+  border: 1px solid red;
+  // background-color: #ffe6e6;
 }

@@ -23,9 +23,6 @@
 
         <div class="space-y-4">
           <div class="mb-1">
-            <!-- <label class="text-gray-800 dark:text-gray-200 text-sm mb-1 block"
-              >First Name</label
-            > -->
             <div class="relative flex items-center">
               <input
                 name="name"
@@ -33,6 +30,12 @@
                 formControlName="firstName"
                 class="bg-white dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
                 placeholder="Enter First Name"
+                [ngClass]="{
+                  'error-class':
+                    (formSubmitted ||
+                      signupForm.controls['firstName'].touched) &&
+                    signupForm.controls['firstName'].invalid
+                }"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,9 +62,6 @@
           </div>
 
           <div class="mb-1">
-            <!-- <label class="text-gray-800 dark:text-gray-200 text-sm mb-1 block"
-              >Last Name</label
-            > -->
             <div class="relative flex items-center">
               <input
                 name="name"
@@ -69,6 +69,12 @@
                 formControlName="lastName"
                 class="bg-white dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
                 placeholder="Enter Last Name"
+                [ngClass]="{
+                  'error-class':
+                    (formSubmitted ||
+                      signupForm.controls['lastName'].touched) &&
+                    signupForm.controls['lastName'].invalid
+                }"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,16 +101,19 @@
           </div>
 
           <div class="mb-1">
-            <!-- <label class="text-gray-800 dark:text-gray-200 text-sm mb-1 block"
-              >Mobile No</label
-            > -->
             <div class="relative flex items-center">
               <input
                 name="name"
                 type="text"
+                [maxlength]="12"
                 formControlName="mobile"
                 class="bg-white dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
                 placeholder="Enter Mobile No."
+                [ngClass]="{
+                  'error-class':
+                    (formSubmitted || signupForm.controls['mobile'].touched) &&
+                    signupForm.controls['mobile'].invalid
+                }"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -131,9 +140,6 @@
           </div>
 
           <div class="mb-1">
-            <!-- <label class="text-gray-800 dark:text-gray-200 text-sm mb-1 block"
-              >Email Id</label
-            > -->
             <div class="relative flex items-center">
               <input
                 name="email"
@@ -141,6 +147,11 @@
                 formControlName="email"
                 class="bg-white dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
                 placeholder="Enter email"
+                [ngClass]="{
+                  'error-class':
+                    (formSubmitted || signupForm.controls['email'].touched) &&
+                    signupForm.controls['email'].invalid
+                }"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,9 +193,6 @@
           </div>
 
           <div>
-            <!-- <label class="text-gray-800 dark:text-gray-200 text-sm mb-1 block"
-              >Password</label
-            > -->
             <div class="relative flex items-center">
               <input
                 name="password"
@@ -192,6 +200,12 @@
                 formControlName="password"
                 class="bg-white dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
                 placeholder="Enter password"
+                [ngClass]="{
+                  'error-class':
+                    (formSubmitted ||
+                      signupForm.controls['password'].touched) &&
+                    signupForm.controls['password'].invalid
+                }"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +235,7 @@
               id="remember-me"
               name="remember-me"
               type="checkbox"
-              class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 dark:border-gray-600 rounded-md"
+              class="h-4 w-4 cursor-pointer shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 dark:border-gray-600 rounded-md"
             />
             <label
               for="remember-me"

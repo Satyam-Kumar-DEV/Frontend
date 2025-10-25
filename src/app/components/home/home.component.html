@@ -7,7 +7,7 @@
     <div class="flex flex-wrap justify-center gap-9 mt-4 font-medium">
       @for(item of headerProductList; track item) {
       <div
-        class="group relative flex flex-col bg-white dark:bg-gray-700 shadow-sm border border-slate-200 dark:border-slate-600 rounded-lg w-full sm:w-80 md:w-96 lg:w-96 xl:w-80"
+        class="group relative flex flex-col bg-[#8E94CF] dark:bg-gray-700 shadow-sm border border-slate-200 dark:border-slate-600 rounded-lg w-full sm:w-80 md:w-96 lg:w-96 xl:w-80"
       >
         <!-- Image Section -->
         <div class="relative h-36 m-2.5 overflow-hidden text-white rounded-md">
@@ -18,14 +18,14 @@
           />
         </div>
         <div class="p-4 flex items-center justify-center">
-          <span class="text-slate-800 dark:text-white text-xl">
+          <span class="text-white dark:text-white text-xl">
             {{ item.title }}
           </span>
         </div>
 
         <!-- Hover Dropdown -->
         <div
-          class="invisible absolute left-0 top-full w-full z-50 flex flex-col bg-white dark:bg-gray-800 py-4 px-4 text-gray-800 dark:text-white shadow-xl rounded-lg group-hover:visible"
+          class="invisible absolute left-0 top-full w-full z-50 flex flex-col bg-[#8E94CF] dark:bg-gray-800 py-4 px-4 text-gray-800 dark:text-white shadow-xl rounded-lg group-hover:visible"
         >
           @for( description of item.moreDetails; track description) {
           <div class="flex justify-between">
@@ -100,7 +100,7 @@
       class="relative"
     >
       <div
-        class="hs-carousel relative overflow-hidden w-full min-h-[500px] bg-white rounded-lg"
+        class="hs-carousel relative overflow-hidden w-full min-h-[500px] bg-[#8E94CF] rounded-lg"
       >
         <div
           class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0"
@@ -179,7 +179,7 @@
     <div class="flex justify-center w-full mt-24">
       <h2 class="flex w-11/12 flex-nowrap items-center">
         <span
-          class="flex-grow block border-t border-gray-500 dark:border-white"
+          class="flex-grow block border-t border-white dark:border-white"
         ></span>
         <span
           class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
@@ -187,7 +187,7 @@
           NEW PRODUCTS
         </span>
         <span
-          class="flex-grow block border-t border-gray-500 dark:border-white"
+          class="flex-grow block border-t border-white dark:border-white"
         ></span>
       </h2>
     </div>
@@ -205,7 +205,7 @@
     <div class="flex justify-center w-full mt-24">
       <h2 class="flex w-11/12 flex-nowrap items-center">
         <span
-          class="flex-grow block border-t border-gray-500 dark:border-white"
+          class="flex-grow block border-t border-white dark:border-white"
         ></span>
         <span
           class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
@@ -213,7 +213,7 @@
           BUY IT YOUR WAY
         </span>
         <span
-          class="flex-grow block border-t border-gray-500 dark:border-white"
+          class="flex-grow block border-t border-white dark:border-white"
         ></span>
       </h2>
     </div>
@@ -324,7 +324,7 @@
     <div class="flex justify-center w-full mt-24">
       <h2 class="flex w-11/12 flex-nowrap items-center">
         <span
-          class="flex-grow block border-t border-gray-500 dark:border-white"
+          class="flex-grow block border-t border-white dark:border-white"
         ></span>
         <span
           class="flex-none block mx-4 px-4 py-2.5 text-[30px] rounded leading-none font-medium text-center"
@@ -332,15 +332,15 @@
           FAQS
         </span>
         <span
-          class="flex-grow block border-t border-gray-500 dark:border-white"
+          class="flex-grow block border-t border-white dark:border-white"
         ></span>
       </h2>
     </div>
-    <div class="w-full max-w-5xl bg-white dark:bg-gray-800 p-5">
+    <div class="w-full max-w-5xl bg-[#8E94CF] dark:bg-gray-800 p-5">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-9">
         <div *ngFor="let faq of faqs; let i = index">
           <div
-            class="flex justify-between items-center cursor-pointer text-black dark:text-white"
+            class="flex justify-between items-center cursor-pointer text-white dark:text-white"
             (click)="toggleFAQ(i)"
           >
             <h3 class="text-lg font-semibold">{{ faq.question }}</h3>
@@ -355,7 +355,7 @@
               'max-h-40 opacity-100 mt-2': faq.isOpen
             }"
           >
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-white dark:text-gray-300">
               {{ faq.answer }}
             </p>
           </div>
@@ -387,7 +387,7 @@
 
   <!-- newsettler -->
   <section
-    class="md:mt-4 bg-gradient-to-br from-gray-900 via-gray-900 to-violet-900 text-white dark:bg-gray-900"
+    class="md:mt-4 bg-gradient-to-br bg-[#8E94CF] text-white dark:bg-gray-900"
   >
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-md sm:text-center">
@@ -395,7 +395,7 @@
           Subscribe to Our Newsettler
         </div>
         <p
-          class="mx-auto mb-8 max-w-2xl font-light md:mb-12 sm:text-xl text-gray-400 dark:text-gray-400"
+          class="mx-auto mb-8 max-w-2xl font-light md:mb-12 sm:text-xl text-white dark:text-gray-400"
         >
           Subscribe Newsettler and Join our list and get 15% off your first
           purchase.
